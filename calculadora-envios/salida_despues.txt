@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: 99.999 COP cobra 8.000 COP de envío
+ok 1 - 99.999 COP cobra 8.000 COP de envío
+  ---
+  duration_ms: 1.505351
+  type: 'test'
+  ...
+# Subtest: 100.000 COP (límite exacto) tiene envío gratis
+ok 2 - 100.000 COP (límite exacto) tiene envío gratis
+  ---
+  duration_ms: 0.192043
+  type: 'test'
+  ...
+# Subtest: 100.001 COP tiene envío gratis
+ok 3 - 100.001 COP tiene envío gratis
+  ---
+  duration_ms: 0.10591
+  type: 'test'
+  ...
+# Subtest: -1 COP lanza RangeError
+ok 4 - -1 COP lanza RangeError
+  ---
+  duration_ms: 0.481247
+  type: 'test'
+  ...
+# Subtest: Caso propio: subtotal 0 COP cobra 8.000 COP de envío
+ok 5 - Caso propio: subtotal 0 COP cobra 8.000 COP de envío
+  ---
+  duration_ms: 0.137331
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 80.207375

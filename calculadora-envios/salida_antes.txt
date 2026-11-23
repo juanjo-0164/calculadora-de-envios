@@ -1,0 +1,60 @@
+TAP version 13
+# Subtest: 99.999 COP cobra 8.000 COP de envío
+ok 1 - 99.999 COP cobra 8.000 COP de envío
+  ---
+  duration_ms: 1.004252
+  type: 'test'
+  ...
+# Subtest: 100.000 COP (límite exacto) tiene envío gratis
+not ok 2 - 100.000 COP (límite exacto) tiene envío gratis
+  ---
+  duration_ms: 0.647594
+  type: 'test'
+  location: '/home/claude/calculadora-envios/envios.test.js:9:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    8000 !== 0
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 0
+  actual: 8000
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/claude/calculadora-envios/envios.test.js:10:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: 100.001 COP tiene envío gratis
+ok 3 - 100.001 COP tiene envío gratis
+  ---
+  duration_ms: 0.090566
+  type: 'test'
+  ...
+# Subtest: -1 COP lanza RangeError
+ok 4 - -1 COP lanza RangeError
+  ---
+  duration_ms: 0.508886
+  type: 'test'
+  ...
+# Subtest: Caso propio: subtotal 0 COP cobra 8.000 COP de envío
+ok 5 - Caso propio: subtotal 0 COP cobra 8.000 COP de envío
+  ---
+  duration_ms: 0.120067
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 4
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 66.931486
